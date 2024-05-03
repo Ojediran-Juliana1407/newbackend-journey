@@ -1,0 +1,101 @@
+## Folder 17 Packages
+ A package is a collection of classes,interfaces or other packages. Packages are used for organizing java programs,if a java project is having 
+a lot of classes or interfaces,then you can group the similar classes and interfaces together and organize them in a form of package.
+ In java,classes are stored in form of files and interfaces and with a .class extension.
+Package is a folder in simple form,we keep related files in a folder.
+
+# Access modifiers 
+Access modifiers are used for specifying the access level or visibility of the members of a class.
+- default
+- private
+- protected
+- public
+ A class can have:
+variable,method and innerclass,outer class cannot be private or protected.
+
+##  Folder 18  Exception
+Exceptions are runtime errors.
+Types of errors include:
+1. Syntax error: this includes typing errors,made by the programmer and the mistake can only be fixed by the compiler.
+2. Logical errors: This deals with error made while compiling the code,tracing of the program/debugger.
+3. Runtime errors: should be inputed by the programmer in the program(exception handling)
+ Mishandling of a program caused by the user:
+- bad input
+- unavailability of resources.
+In this sense, the program will stop working,it crashes.
+
+# Try and catch block
+For one try block, there can be multiple catch block
+try block can have finally block(optional)
+finally block definitely is executed for clean up process whether there is an exception or not.
+   Excepton:
+# Checked exception
+- classNotFoundException
+-IOException (accessing files from harddisk) file not found
+- InterruptedException (multi-threading,when the threading stops)
+- NumberFormatException
+- RuntimeException
+
+# Unchecked Exception 
+- ArithmeticException
+_ IndexOutOfBoundException
+-NullPolluterException
+
+All exception classes are categorized into two:
+1. checked exception: must be handled using try and catch
+2. unchecked exception: can be handled or not.
+
+## Folder 19  Multi-threading
+- Multiprogramming: running more than one program on a single machine,more than one user using the machine at the same time and running their 
+own program at the same time.
+
+- Multithreading: Having more than one thread running in a single application,the threads run simultaneously.
+
+- Multitasking: single user running more than one program at a time.
+
+   # How to achieve multithreading:
+1. Thread class- mechanism is present here
+2. Runnable interface- cant run on its own except with an object of a thread.
+
+#Thread class:
+run is the starting point of a thread
+a class must extend from a thread
+create its object and call it start method t.start();
+ # Thread priorities:
+Thread.MIN_PRIORITY = 1
+Thread.NORM_PRIORITY = 5
+Thread.MAX_PRIORITY = 10
+ N:B Daemon thread is a bacckground thread with least priority e.g garbage collector.
+Starvation is when the higher priority consumes all the time than the lower priority,this can be regulated by the scheduler using the void yield ();
+
+##  Folder 20 java.lang package
+Object class:
+ Object class is the parent class for all the classes in java,mother of all object in java.
+import java.lang
+hashcode() unique code to every java object
+notify()
+notifyAll()
+toString()
+
+# Wrapper classes:
+In java everything is an object,but primitives are not objects,wrappers helps to wrap around the primitive so that the primitive becomes classes
+and hence we can create an object.
+ wrapper classes includes:
+- character - byte - short -integer -long -float -double -boolean (java.lang package)
+
+Float classes:
+ Float class is having common method from integer class because they are inheriting from the class number.
+
+# String Buffer and String Builder
+String class objects are immutable(not modifiable)
+- String Buffer is similar to string but with extra method,it is modifiable(mutable),it is thread safe,that is more than 2 threads cannot utilize
+the object at the same time(simultaneously) to eliminate the risk of loss of data.It is slower because it is synchronized.
+- String Builder is not thread safer,it allows for more than one thread and it is faster.
+
+##  Folder 21   Annotations and JavaDoc 
+JavaDoc contains all the java packages.
+Annotations: They are used for giving attributes or defining the attribute of a class,interface or method.They are useful for giving metadata
+metadata is data about data
+ Annotation:
+1. Applied to code: it has effect on the code
+2. Applied to other annotations
